@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayo's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel = "stylesheet" href = "assets/styles/style.css">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/devicons@2.0.1/dist/devicons.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="assets/img/dayo-logo.jpeg">
+            <!-- <span>Dayo Adebari</span> -->
+        </a>
+        <ul class = "section-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <!-- <li><a href="#skills">Skills</a></li> -->
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <i class = "fa-solid fa-bars" id = "menu-icon"></i>
+
+        <button class = "visit-btn">Visit GitHub</button>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-img-container">
+                <img src="assets/img/dayo.png" alt="">
+
+            </div>
+            <div class="info-box">
+                <div class="info-text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Dayo Adebari</h1>
+                    <span>Serial Founder | Software Engineer</span>
+                </div>
+                <div class="btn-group">
+                    <div class="btn">View My Work<i class="fa-solid fa-square-arrow-up-right"></i></div>
+                    <div class="btn">Download CV<i class="fa-solid fa-download"></i></div>
+                    <div class="btn"><a href="#contact">Contact Me <i class="fa-regular fa-comments"></i></a></div>
+                </div>
+                <!-- <div class="socials">
+                     <i class="fa-brands fa-square-linkedin"></i>
+                     <i class="fa-brands fa-github"></i>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <div class="tech-stack">
+        <div class="tech-item">
+            <i class="devicon-react-plain" alt="React"></i>
+            <span>React</span>
+            <div class="progress">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="tech-item">
+            <i class="devicon-django-plain"></i>
+            <span>Django</span>
+            <div class="progress">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="tech-item">
+            <i class="devicon-nextjs-plain" alt="React"></i>
+            <span>NextJS</span>
+            <div class="progress">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="tech-item">
+            <i class="devicon-html5-plain" alt="HTML"></i>
+            <span>HTML</span>
+            <div class="progress">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="tech-item">
+            <i class="devicon-javascript-plain" alt="JavaScript"></i>
+            <span>JavaScript</span>
+            <div class="progress">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Founder, CEO | The Clean Up Crew</span>
+                    <h3>2 Years</h3>
+                    <p>Founded and lead a tech solutions business, delivering brand enhancement, website redesigns, process
+                        automation services.
+                        <br><br>Designed and built a secure full-stack web platform for a charity organisation to track their outreach.
+                        <!-- <ul>
+                            <li>Developed frontend using <strong>EJS templates</strong>, <strong>Tailwind CSS</strong>, light <strong>HTMX</strong>, and <strong>JavaScript</strong> for a responsive and clean UI.</li>
+                            <li>Developed backend using <strong>Node.js</strong>, <strong>Express</strong>, <strong>Passport Local authentication</strong>,
+                                 <strong>Zod validation</strong>, <strong>Helmet</strong>  and <strong>csurf</strong>.</li>
+                            <li>Implemented a data layer with <strong>Prisma ORM</strong> and <strong>PostgresSQL</strong>.</li>
+                        </ul> -->
+                    </p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Founder, CTO | Splita</span>
+                    <h3>6 months</h3>
+                    <p>Co-founded Splita, a mobile-first bill-splitting platform that collects everyone’s share upfront and issues a
+                        virtual card to the host once all payments are confirmed, eliminating the need to front costs or chase
+                        reimbursements.<br> <br>
+                        Leading a cross-functional team of 5 developers across frontend, backend, cybersecurity, and data,
+                        overseeing architecture decisions and sprint delivery.
+                    </p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>Co-Founder | Tutor Point</span>
+                    <h3>6 months</h3>
+                    <p>Founded Tutor Point, an online maths tutoring platform connecting Nigerian students with vetted tutors for
+                        personalised one-to-one preparation for WAEC, JAMB, NECO and GCSE examinations. <br><br>
+                        Built all onboarding funnels and automations using HTML/CSS/JS, Express, PostgreSQL, and Python,
+                        covering student sign-ups, tutor applications, and interview pipeline management. <br><br>
+                        Engineered a tutor screening system using text recognition software to parse exam board materials into
+                        structured JSON question banks, which are randomised and hosted through a protected portal to
+                        administer live screening exams.
+                    </p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <span>KFC | Digital Analyst</span>
+                    <h3>3 months</h3>
+                    <p>Analysed large volumes of kiosk interaction data to identify behavioural patterns, friction points, and conversion opportunities across the digital ordering journey.
+                        <br>Built dashboards and analytical reports using Google Analytics, Datadog, Excel, and Aternity, enabling real-time monitoring of customer flows, latency issues, and feature performance.
+                        <br>Worked with engineering and product teams to interpret telemetry signals, validate hypotheses, and propose data-driven improvements to kiosk UX and throughput.
+                        <br>Automated recurring analysis tasks and designed reproducible data workflows that increased reporting efficiency and reduced manual processing.
+                        <br>Presented insights to cross-functional stakeholders, influencing decisions that improved customer experience and supported revenue-driving initiatives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="assets/img/proj-splita.png" alt="">
+                <h3>Splita</h3>
+                <p>Problem: Splitting group payments<br><br>
+                    Solution: Virtual Cards to collate payments.</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">GitHub Repo</div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/img/proj-e3000.png" alt="">
+                <h3>E-3000</h3>
+                <p>Problem: Tracking evangelistic efforts<br><br>
+                    Solution: Logging platform that collates the details of those engaged.</p>
+                <div class="btn-group">
+                    <div class="btn" src="harvestisplenty.uk">Live Demo</div>
+                    <div class="btn">GitHub Repo</div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/img/proj-tp.png" alt="">
+                <h3>Tutor Point</h3>
+                <p>Problem: Tracking impact of tutoring<br><br>
+                    Solution: Tutoring site with performance based metrics.</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">GitHub Repo</div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/img/proj-tcc.png" alt="">
+                <h3>The Clean Up Crew</h3>
+                <p>Problem: Unappealing websites<br><br>
+                    Solution: A website revamp service to upgrade web presence.</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">GitHub Repo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="contact" id="contact">
+        <div class="input-box">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="input">
+                <input type="text" name="" id="" placeholder="john-doe@email.com">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="btn">Submit</div>
+        </div>
+    </section> -->
+    <footer>
+        <div class="input-box">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="input">
+                <input type="text" name="" id="" placeholder="john-doe@email.com">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="btn">Submit</div>
+        </div>
+        <ul class = "section-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <!-- <li><a href="#skills">Skills</a></li> -->
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyright">All Rights Reserved | Maureen Jaisey</p>
+    </footer>
+
+
+
+    <script src="assets/scripts/script.js"></script>
+</body>
+</html>
