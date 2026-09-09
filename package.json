@@ -1,0 +1,9 @@
+{
+  "name": "dayo-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dayo Adebari's portfolio site, with a Vercel serverless function powering the contact form via Resend.",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}

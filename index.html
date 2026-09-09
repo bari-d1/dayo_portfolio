@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dayo's Portfolio</title>
+    <title>Dayo Adebari</title>
+    <link rel="icon" type="image/jpeg" href="assets/img/dayo-logo.jpeg">
+    <link rel="apple-touch-icon" href="assets/img/dayo-logo.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,19 +28,36 @@
             <li><a href="#experience">Experience</a></li>
             <!-- <li><a href="#skills">Skills</a></li> -->
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <i class = "fa-solid fa-bars" id = "menu-icon"></i>
 
-        <button class = "visit-btn">Visit GitHub</button>
+        <a href="#contact"><button class = "visit-btn">Contact Me</button></a>
     </header>
 
     <section id="about" class="about">
+        <div class="section-bg">
+            <span class="blob blob-1"></span>
+            <span class="blob blob-color blob-1"></span>
+            <span class="blob blob-2"></span>
+            <span class="blob blob-color blob-2"></span>
+            <span class="blob blob-5"></span>
+            <span class="blob blob-color blob-5"></span>
+            <span class="blob blob-6"></span>
+            <span class="blob blob-color blob-6"></span>
+            <span class="blob blob-7"></span>
+            <span class="blob blob-color blob-7"></span>
+            <span class="blob blob-15"></span>
+            <span class="blob blob-color blob-15"></span>
+            <span class="blob blob-16"></span>
+            <span class="blob blob-color blob-16"></span>
+            <span class="blob blob-17"></span>
+            <span class="blob blob-color blob-17"></span>
+        </div>
         <div class="about-container">
             <div class="about-img-container">
-                <img src="assets/img/dayo.png" alt="">
-
+                <img class="about-photo about-photo-mono" src="assets/img/dayo.png" alt="">
+                <img class="about-photo about-photo-color" src="assets/img/dayo.png" alt="">
             </div>
             <div class="info-box">
                 <div class="info-text">
@@ -47,8 +66,8 @@
                     <span>Serial Founder | Software Engineer</span>
                 </div>
                 <div class="btn-group">
-                    <div class="btn">View My Work<i class="fa-solid fa-square-arrow-up-right"></i></div>
-                    <div class="btn">Download CV<i class="fa-solid fa-download"></i></div>
+                    <a class="btn" href="#projects">View My Work<i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    <a class="btn" href="assets/docs/dayo-adebari-cv.pdf" download>Download CV<i class="fa-solid fa-download"></i></a>
                     <div class="btn"><a href="#contact">Contact Me <i class="fa-regular fa-comments"></i></a></div>
                 </div>
                 <!-- <div class="socials">
@@ -59,178 +78,260 @@
         </div>
     </section>
 
-    <div class="tech-stack">
-        <div class="tech-item">
-            <i class="devicon-react-plain" alt="React"></i>
-            <span>React</span>
-            <div class="progress">
-                <div class="progress-fill" style="width: 85%;"></div>
+    <section id="whoami" class="whoami">
+        <div class="whoami-inner">
+            <h2 class="section-title">Who I Am</h2>
+            <p class="whoami-text">I'm a serial entrepreneur and educator based in the UK, working across technology, education, and creative media. As Co-Founder and CTO of Splita, a bill-splitting app, I lead product and technical strategy. I also founded Tutor Point, an online tutoring platform serving West African and international exam students, and have over 2,000 hours of tutoring experience. In the creative media space, I run Verse by Verse, a gospel media brand offering artist lyric breakdowns, alongside Verse by Verse Edits, a sermon clip service for UK churches. Beyond these ventures, I work on web design and community-facing projects, bringing a multi-disciplinary approach that spans software development, teaching, and music. I'm driven by building practical tools and educational experiences that make a real difference for the people who use them.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="tech-stack">
+            <div class="tech-item">
+                <i class="devicon-react-plain" alt="React"></i>
+                <span>React</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="tech-item">
+                <i class="devicon-python-plain"></i>
+                <span>Python</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="tech-item">
+                <i class="devicon-nextjs-plain" alt="React"></i>
+                <span>NextJS</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="tech-item">
+                <i class="devicon-html5-plain" alt="HTML"></i>
+                <span>HTML</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="tech-item">
+                <i class="devicon-javascript-plain" alt="JavaScript"></i>
+                <span>JavaScript</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="tech-expand-wrap">
+                <span class="tech-tooltip">Click me</span>
+                <button class="tech-expand-btn" id="tech-expand-btn" aria-label="Show more technologies" aria-expanded="false">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
             </div>
         </div>
-        <div class="tech-item">
-            <i class="devicon-django-plain"></i>
-            <span>Django</span>
-            <div class="progress">
-                <div class="progress-fill" style="width: 85%;"></div>
+
+        <div class="tech-expand-panel" id="tech-expand-panel">
+            <div class="tech-expand-row">
+                <div class="tech-chip"><i class="devicon-css3-plain"></i><span>CSS</span></div>
+                <div class="tech-chip"><i class="devicon-typescript-plain"></i><span>TypeScript</span></div>
+                <div class="tech-chip"><i class="devicon-java-plain"></i><span>Java</span></div>
+                <div class="tech-chip"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+                <div class="tech-chip"><i class="devicon-c-plain"></i><span>C</span></div>
+                <div class="tech-chip"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                <div class="tech-chip"><i class="devicon-bash-plain"></i><span>Bash/Shell</span></div>
+                <div class="tech-chip"><i class="devicon-django-plain"></i><span>Django</span></div>
+                <div class="tech-chip"><i class="devicon-json-plain"></i><span>JSON/YAML</span></div>
+            </div>
+            <div class="tech-expand-row">
+                <div class="tech-chip"><i class="devicon-vuejs-plain"></i><span>Vue</span></div>
+                <div class="tech-chip"><i class="devicon-nodejs-plain"></i><span>Node.js (Express)</span></div>
+                <div class="tech-chip"><i class="devicon-reactnative-original"></i><span>React Native (Expo)</span></div>
+                <div class="tech-chip"><i class="devicon-prisma-original"></i><span>Prisma ORM</span></div>
+                <div class="tech-chip"><i class="devicon-tailwindcss-plain"></i><span>Tailwind CSS</span></div>
+                <div class="tech-chip"><i class="devicon-passport-plain"></i><span>Passport.js</span></div>
+                <div class="tech-chip"><i class="fa-solid fa-shield-halved"></i><span>Zod</span></div>            </div>
+            <div class="tech-expand-row">
+                <div class="tech-chip"><i class="devicon-supabase-plain"></i><span>Supabase</span></div>
+                <div class="tech-chip"><i class="fa-solid fa-cloud"></i><span>Render</span></div>
+                <div class="tech-chip"><i class="devicon-vercel-original"></i><span>Vercel</span></div>
+                <div class="tech-chip"><i class="devicon-cloudflare-plain"></i><span>Cloudflare</span></div>
+                <div class="tech-chip"><i class="devicon-githubactions-plain"></i><span>GitHub Actions</span></div>
+                <div class="tech-chip"><i class="devicon-sentry-plain"></i><span>Sentry</span></div>
+                <div class="tech-chip"><i class="devicon-datadog-plain"></i><span>Datadog</span></div>
+                <div class="tech-chip"><i class="fa-solid fa-chart-column"></i><span>Power BI</span></div>
+                <div class="tech-chip"><i class="devicon-git-plain"></i><span>Git</span></div>
+                <div class="tech-chip"><i class="devicon-postman-plain"></i><span>Postman</span></div>
+                <div class="tech-chip"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+            </div>
+        </div><br>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card-wrap" style="--angle: -37.5deg;">
+                    <div class="grid-card" style="--angle: -37.5deg;">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Founder, CEO | The Clean Up Crew</span>
+                        <h3>2023 - Present</h3>
+                        <p class="card-text">Founded and lead a tech solutions business, delivering brand enhancement, website redesigns, process
+                            automation services.
+                            <br><br>Designed and built a secure full-stack web platform for a charity organisation to track their outreach.
+                        </p>
+                        <button class="read-more-btn">Read more</button>
+                    </div>
+                </div>
+                <div class="grid-card-wrap" style="--angle: -12.5deg;">
+                    <div class="grid-card" style="--angle: -12.5deg;">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>Founder, CTO | Splita</span>
+                        <h3>2025 - Present</h3>
+                        <p class="card-text">Co-founded Splita, a mobile-first bill-splitting platform that collects everyone’s share upfront and issues a
+                            virtual card to the host once all payments are confirmed, eliminating the need to front costs or chase
+                            reimbursements.<br> <br>
+                            Leading a cross-functional team of 5 developers across frontend, backend, cybersecurity, and data,
+                            overseeing architecture decisions and sprint delivery.
+                        </p>
+                        <button class="read-more-btn">Read more</button>
+                    </div>
+                </div>
+                <div class="grid-card-wrap" style="--angle: 12.5deg;">
+                    <div class="grid-card" style="--angle: 12.5deg;">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span>Co-Founder | Tutor Point</span>
+                        <h3>2025 - Present</h3>
+                        <p class="card-text">Founded Tutor Point, an online maths tutoring platform connecting Nigerian students with vetted tutors for
+                            personalised one-to-one preparation for WAEC, JAMB, NECO and GCSE examinations. <br><br>
+                            Built all onboarding funnels and automations using HTML/CSS/JS, Express, PostgreSQL, and Python,
+                            covering student sign-ups, tutor applications, and interview pipeline management. <br><br>
+                            Engineered a tutor screening system using text recognition software to parse exam board materials into
+                            structured JSON question banks, which are randomised and hosted through a protected portal to
+                            administer live screening exams.
+                        </p>
+                        <button class="read-more-btn">Read more</button>
+                    </div>
+                </div>
+                <div class="grid-card-wrap" style="--angle: 37.5deg;">
+                    <div class="grid-card" style="--angle: 37.5deg;">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <span>KFC | Digital Analyst</span>
+                        <h3>2025</h3>
+                        <p class="card-text">Analysed large volumes of kiosk interaction data to identify behavioural patterns, friction points, and conversion opportunities across the digital ordering journey.
+                            <br>Built dashboards and analytical reports using Google Analytics, Datadog, Excel, and Aternity, enabling real-time monitoring of customer flows, latency issues, and feature performance.
+                            <br>Worked with engineering and product teams to interpret telemetry signals, validate hypotheses, and propose data-driven improvements to kiosk UX and throughput.
+                            <br>Automated recurring analysis tasks and designed reproducible data workflows that increased reporting efficiency and reduced manual processing.
+                            <br>Presented insights to cross-functional stakeholders, influencing decisions that improved customer experience and supported revenue-driving initiatives.
+                        </p>
+                        <button class="read-more-btn">Read more</button>
+                    </div>
+                </div>
+                <div class="fan-title">
+                    <h2 class="section-title">Experience</h2>
+                    <span class="fan-hint">Click a card to read more</span>
+                </div>
             </div>
         </div>
-        <div class="tech-item">
-            <i class="devicon-nextjs-plain" alt="React"></i>
-            <span>NextJS</span>
-            <div class="progress">
-                <div class="progress-fill" style="width: 85%;"></div>
-            </div>
-        </div>
-        <div class="tech-item">
-            <i class="devicon-html5-plain" alt="HTML"></i>
-            <span>HTML</span>
-            <div class="progress">
-                <div class="progress-fill" style="width: 85%;"></div>
-            </div>
-        </div>
-        <div class="tech-item">
-            <i class="devicon-javascript-plain" alt="JavaScript"></i>
-            <span>JavaScript</span>
-            <div class="progress">
-                <div class="progress-fill" style="width: 85%;"></div>
-            </div>
+    </section>
+
+    <div class="card-modal">
+        <div class="card-modal-content">
+            <button class="card-modal-close">&times;</button>
+            <i class="card-modal-icon"></i>
+            <span class="card-modal-title"></span>
+            <h3 class="card-modal-duration"></h3>
+            <p class="card-modal-text"></p>
         </div>
     </div>
 
-    <section id="experience" class="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-info">
-            <div class="grid">
-                <div class="grid-card">
-                    <i class="fa-solid fa-code"></i>
-                    <span>Founder, CEO | The Clean Up Crew</span>
-                    <h3>2 Years</h3>
-                    <p>Founded and lead a tech solutions business, delivering brand enhancement, website redesigns, process
-                        automation services.
-                        <br><br>Designed and built a secure full-stack web platform for a charity organisation to track their outreach.
-                        <!-- <ul>
-                            <li>Developed frontend using <strong>EJS templates</strong>, <strong>Tailwind CSS</strong>, light <strong>HTMX</strong>, and <strong>JavaScript</strong> for a responsive and clean UI.</li>
-                            <li>Developed backend using <strong>Node.js</strong>, <strong>Express</strong>, <strong>Passport Local authentication</strong>,
-                                 <strong>Zod validation</strong>, <strong>Helmet</strong>  and <strong>csurf</strong>.</li>
-                            <li>Implemented a data layer with <strong>Prisma ORM</strong> and <strong>PostgresSQL</strong>.</li>
-                        </ul> -->
-                    </p>
-                </div>
-                <div class="grid-card">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <span>Founder, CTO | Splita</span>
-                    <h3>6 months</h3>
-                    <p>Co-founded Splita, a mobile-first bill-splitting platform that collects everyone’s share upfront and issues a
-                        virtual card to the host once all payments are confirmed, eliminating the need to front costs or chase
-                        reimbursements.<br> <br>
-                        Leading a cross-functional team of 5 developers across frontend, backend, cybersecurity, and data,
-                        overseeing architecture decisions and sprint delivery.
-                    </p>
-                </div>
-                <div class="grid-card">
-                    <i class="fa-solid fa-chalkboard-user"></i>
-                    <span>Co-Founder | Tutor Point</span>
-                    <h3>6 months</h3>
-                    <p>Founded Tutor Point, an online maths tutoring platform connecting Nigerian students with vetted tutors for
-                        personalised one-to-one preparation for WAEC, JAMB, NECO and GCSE examinations. <br><br>
-                        Built all onboarding funnels and automations using HTML/CSS/JS, Express, PostgreSQL, and Python,
-                        covering student sign-ups, tutor applications, and interview pipeline management. <br><br>
-                        Engineered a tutor screening system using text recognition software to parse exam board materials into
-                        structured JSON question banks, which are randomised and hosted through a protected portal to
-                        administer live screening exams.
-                    </p>
-                </div>
-                <div class="grid-card">
-                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-                    <span>KFC | Digital Analyst</span>
-                    <h3>3 months</h3>
-                    <p>Analysed large volumes of kiosk interaction data to identify behavioural patterns, friction points, and conversion opportunities across the digital ordering journey.
-                        <br>Built dashboards and analytical reports using Google Analytics, Datadog, Excel, and Aternity, enabling real-time monitoring of customer flows, latency issues, and feature performance.
-                        <br>Worked with engineering and product teams to interpret telemetry signals, validate hypotheses, and propose data-driven improvements to kiosk UX and throughput.
-                        <br>Automated recurring analysis tasks and designed reproducible data workflows that increased reporting efficiency and reduced manual processing.
-                        <br>Presented insights to cross-functional stakeholders, influencing decisions that improved customer experience and supported revenue-driving initiatives.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="projects" id="projects">
-        <h2 class="section-title">Recent Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="assets/img/proj-splita.png" alt="">
-                <h3>Splita</h3>
-                <p>Problem: Splitting group payments<br><br>
-                    Solution: Virtual Cards to collate payments.</p>
-                <div class="btn-group">
-                    <div class="btn">Live Demo</div>
-                    <div class="btn">GitHub Repo</div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="assets/img/proj-e3000.png" alt="">
-                <h3>E-3000</h3>
-                <p>Problem: Tracking evangelistic efforts<br><br>
-                    Solution: Logging platform that collates the details of those engaged.</p>
-                <div class="btn-group">
-                    <div class="btn" src="harvestisplenty.uk">Live Demo</div>
-                    <div class="btn">GitHub Repo</div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="assets/img/proj-tp.png" alt="">
-                <h3>Tutor Point</h3>
-                <p>Problem: Tracking impact of tutoring<br><br>
-                    Solution: Tutoring site with performance based metrics.</p>
-                <div class="btn-group">
-                    <div class="btn">Live Demo</div>
-                    <div class="btn">GitHub Repo</div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="assets/img/proj-tcc.png" alt="">
-                <h3>The Clean Up Crew</h3>
-                <p>Problem: Unappealing websites<br><br>
-                    Solution: A website revamp service to upgrade web presence.</p>
-                <div class="btn-group">
-                    <div class="btn">Live Demo</div>
-                    <div class="btn">GitHub Repo</div>
-                </div>
-            </div>
+        <div class="projects-header">
+            <h2 class="section-title">Recent Projects</h2>
         </div>
+        <div class="carousel">
+            <button class="carousel-btn carousel-prev" aria-label="Previous project">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="carousel-track">
+                <div class="project-card">
+                    <img src="assets/img/proj-splita.png" alt="">
+                    <h3>Splita</h3>
+                    <p>Problem: Splitting group payments<br><br>
+                        Solution: Virtual Cards to collate payments.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://splita.co/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <div class="btn">GitHub Repo</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/img/proj-e3000.png" alt="">
+                    <h3>E-3000</h3>
+                    <p>Problem: Tracking evangelistic efforts<br><br>
+                        Solution: Logging platform that collates the details of those engaged.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://harvestisplenty.uk/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <div class="btn">GitHub Repo</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/img/proj-tp.png" alt="">
+                    <h3>Tutor Point</h3>
+                    <p>Problem: Tracking impact of tutoring<br><br>
+                        Solution: Tutoring site with performance based metrics.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://www.tutorpoint.ng/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <a class="btn" href="https://github.com/bari-d1/tutor-point" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/img/proj-tcc.png" alt="">
+                    <h3>The Clean Up Crew</h3>
+                    <p>Problem: Unappealing websites<br><br>
+                        Solution: A website revamp service to upgrade web presence.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://www.thecleanupcrew.co.uk/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <a class="btn" href="https://github.com/bari-d1/cleanup-crew" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-next" aria-label="Next project">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="carousel-dots"></div>
     </section>
-    <!-- <section class="contact" id="contact">
-        <div class="input-box">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="input">
-                <input type="text" name="" id="" placeholder="john-doe@email.com">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="btn">Submit</div>
+    <footer id="contact">
+        <div class="footer-cta">
+            <h2 class="section-title footer-heading">Let's Build Something Great</h2>
+            <p class="footer-subtitle">Have a project in mind? Drop your email and I'll get back to you.</p>
+            <form class="input-box" id="contact-form">
+                <div class="input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" id="contact-email" placeholder="john-doe@email.com" required>
+                    <button class="footer-submit" type="submit">
+                        <span class="footer-submit-text">Submit</span>
+                    </button>
+                </div>
+                <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+            </form>
         </div>
-    </section> -->
-    <footer>
-        <div class="input-box">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="input">
-                <input type="text" name="" id="" placeholder="john-doe@email.com">
-                <i class="fa-solid fa-envelope"></i>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Dayo Adebari. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/oluwadayobomi-adebari" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/bari-d1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
-            <div class="btn">Submit</div>
         </div>
-        <ul class = "section-links">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <!-- <li><a href="#skills">Skills</a></li> -->
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <p class="copyright">All Rights Reserved | Maureen Jaisey</p>
     </footer>
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="assets/scripts/script.js"></script>
 </body>
 </html>
