@@ -903,7 +903,7 @@ i.scroll-indicator{
     margin-bottom: 1rem;
 }
 
-.exp-chevron{
+i.exp-chevron{
     display: none;
 }
 
@@ -1712,7 +1712,7 @@ footer{
     }
 
     /* ---- Experience: accordion dropdowns, matching What I Offer ---- */
-    .exp-chevron{
+    i.exp-chevron{
         display: block;
         position: absolute;
         top: 1.75rem;

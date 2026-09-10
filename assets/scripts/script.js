@@ -246,6 +246,8 @@ const FAN_VISIBLE = FAN_ANGLES.length;
 let fanStart = 0;
 
 function updateFan() {
+    if (mobileNavQuery.matches) return;
+
     const total = fanWraps.length;
     fanWraps.forEach((wrap, i) => {
         const card = wrap.querySelector('.grid-card');
@@ -278,6 +280,17 @@ if (fanWraps.length > FAN_VISIBLE) {
     document.querySelector('.fan-prev').style.display = 'none';
     document.querySelector('.fan-next').style.display = 'none';
 }
+
+mobileNavQuery.addEventListener('change', (e) => {
+    if (e.matches) {
+        fanWraps.forEach((wrap) => {
+            wrap.style.opacity = '';
+            wrap.classList.remove('fan-hidden');
+        });
+    } else {
+        updateFan();
+    }
+});
 
 cardModal.querySelector('.card-modal-close').addEventListener('click', () => {
     cardModal.classList.remove('open');
