@@ -3,26 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dayo Adebari</title>
+    <title>Dayo Adebari — Software Engineer, Web Developer &amp; Founder</title>
+    <meta name="description" content="Dayo Adebari is a software engineer and serial founder building full-stack web &amp; mobile apps, web design, brand strategy, content production, and tutoring services.">
+    <link rel="canonical" href="https://dayoadebari.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dayo Adebari — Software Engineer, Web Developer & Founder">
+    <meta property="og:description" content="Software engineer and serial founder building full-stack web & mobile apps, web design, brand strategy, content production, and tutoring services.">
+    <meta property="og:url" content="https://dayoadebari.com/">
+    <meta property="og:image" content="https://dayoadebari.com/assets/img/dayo-logo-main.jpeg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dayo Adebari — Software Engineer, Web Developer & Founder">
+    <meta name="twitter:description" content="Software engineer and serial founder building full-stack web & mobile apps, web design, brand strategy, content production, and tutoring services.">
+    <meta name="twitter:image" content="https://dayoadebari.com/assets/img/dayo-logo-main.jpeg">
+
     <link rel="icon" type="image/jpeg" href="assets/img/dayo-logo.jpeg">
     <link rel="apple-touch-icon" href="assets/img/dayo-logo.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <link rel = "stylesheet" href = "assets/styles/style.css">
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/devicons@2.0.1/dist/devicons.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-          
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dayo Adebari",
+        "url": "https://dayoadebari.com/",
+        "image": "https://dayoadebari.com/assets/img/dayo-logo-main.jpeg",
+        "jobTitle": "Software Engineer & Founder",
+        "sameAs": [
+            "https://linkedin.com/in/oluwadayobomi-adebari",
+            "https://github.com/bari-d1"
+        ]
+    }
+    </script>
 </head>
 <body>
     <header>
         <a href="#" class="logo">
-            <img src="assets/img/dayo-logo.jpeg">
+            <img src="assets/img/dayo-logo.jpeg" alt="Dayo Adebari logo">
             <!-- <span>Dayo Adebari</span> -->
         </a>
+        <span class="mobile-name">Dayo Adebari</span>
         <ul class = "section-links">
             <li><a href="#about">About Me</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -32,8 +60,10 @@
 
         <i class = "fa-solid fa-bars" id = "menu-icon"></i>
 
-        <a href="#contact"><button class = "visit-btn">Contact Me</button></a>
+        <a href="#contact" class="visit-btn-link"><button class = "visit-btn">Contact Me</button></a>
     </header>
+
+    <div class="nav-backdrop"></div>
 
     <section id="about" class="about">
         <div class="section-bg">
@@ -56,8 +86,8 @@
         </div>
         <div class="about-container">
             <div class="about-img-container">
-                <img class="about-photo about-photo-mono" src="assets/img/dayo.png" alt="">
-                <img class="about-photo about-photo-color" src="assets/img/dayo.png" alt="">
+                <img class="about-photo about-photo-mono" src="assets/img/dayo.png" alt="Portrait of Dayo Adebari">
+                <img class="about-photo about-photo-color" src="assets/img/dayo.png" alt="Portrait of Dayo Adebari">
             </div>
             <div class="info-box">
                 <div class="info-text">
@@ -76,12 +106,104 @@
                 </div> -->
             </div>
         </div>
+        <i class="fa-solid fa-chevron-down scroll-indicator" aria-hidden="true"></i>
     </section>
 
     <section id="whoami" class="whoami">
         <div class="whoami-inner">
             <h2 class="section-title">Who I Am</h2>
             <p class="whoami-text">I'm a serial entrepreneur and educator based in the UK, working across technology, education, and creative media. As Co-Founder and CTO of Splita, a bill-splitting app, I lead product and technical strategy. I also founded Tutor Point, an online tutoring platform serving West African and international exam students, and have over 2,000 hours of tutoring experience. In the creative media space, I run Verse by Verse, a gospel media brand offering artist lyric breakdowns, alongside Verse by Verse Edits, a sermon clip service for UK churches. Beyond these ventures, I work on web design and community-facing projects, bringing a multi-disciplinary approach that spans software development, teaching, and music. I'm driven by building practical tools and educational experiences that make a real difference for the people who use them.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">What I Offer</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-skill-card>
+                <button class="skill-card-header" aria-expanded="false">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Software Development</h3>
+                    <i class="fa-solid fa-chevron-down skill-chevron"></i>
+                </button>
+                <div class="skill-panel">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i><span>Full-stack web application development</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Mobile app development (React Native)</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>MVP and prototype development for startups</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill-card>
+                <button class="skill-card-header" aria-expanded="false">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <h3>Web Design</h3>
+                    <i class="fa-solid fa-chevron-down skill-chevron"></i>
+                </button>
+                <div class="skill-panel">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i><span>Website design and build for small and medium businesses</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Landing page development</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill-card>
+                <button class="skill-card-header" aria-expanded="false">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>Brand Management</h3>
+                    <i class="fa-solid fa-chevron-down skill-chevron"></i>
+                </button>
+                <div class="skill-panel">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i><span>Brand strategy and management</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill-card>
+                <button class="skill-card-header" aria-expanded="false">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <h3>Content Production</h3>
+                    <i class="fa-solid fa-chevron-down skill-chevron"></i>
+                </button>
+                <div class="skill-panel">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i><span>Content calendar and posting cadence</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Copywriting (captions, LinkedIn posts, etc.)</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Visual content — photography, video, graphics, reels/shorts</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Repurposing content across platforms (one shoot → multiple posts)</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Sermon clip editing (Verse by Verse Edits)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill-card>
+                <button class="skill-card-header" aria-expanded="false">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Tutoring &amp; Education</h3>
+                    <i class="fa-solid fa-chevron-down skill-chevron"></i>
+                </button>
+                <div class="skill-panel">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i><span>A-Level, IB, and GCSE tutoring across Maths, Further Maths, Physics, Chemistry, and Computer Science</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Educational platform / edtech consulting</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card" data-skill-card>
+                <button class="skill-card-header" aria-expanded="false">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Consulting</h3>
+                    <i class="fa-solid fa-chevron-down skill-chevron"></i>
+                </button>
+                <div class="skill-panel">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i><span>Technical/developer consulting for early-stage products</span></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -132,6 +254,8 @@
 
         <div class="tech-expand-panel" id="tech-expand-panel">
             <div class="tech-expand-row">
+                <div class="tech-chip mobile-only-chip"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+                <div class="tech-chip mobile-only-chip"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
                 <div class="tech-chip"><i class="devicon-css3-plain"></i><span>CSS</span></div>
                 <div class="tech-chip"><i class="devicon-typescript-plain"></i><span>TypeScript</span></div>
                 <div class="tech-chip"><i class="devicon-java-plain"></i><span>Java</span></div>
@@ -144,8 +268,8 @@
             </div>
             <div class="tech-expand-row">
                 <div class="tech-chip"><i class="devicon-vuejs-plain"></i><span>Vue</span></div>
-                <div class="tech-chip"><i class="devicon-nodejs-plain"></i><span>Node.js (Express)</span></div>
-                <div class="tech-chip"><i class="devicon-reactnative-original"></i><span>React Native (Expo)</span></div>
+                <div class="tech-chip"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                <div class="tech-chip"><i class="devicon-reactnative-original"></i><span>React Native</span></div>
                 <div class="tech-chip"><i class="devicon-prisma-original"></i><span>Prisma ORM</span></div>
                 <div class="tech-chip"><i class="devicon-tailwindcss-plain"></i><span>Tailwind CSS</span></div>
                 <div class="tech-chip"><i class="devicon-passport-plain"></i><span>Passport.js</span></div>
@@ -165,10 +289,12 @@
             </div>
         </div><br>
         <div class="experience-info">
+            <button class="fan-nav-btn fan-prev" aria-label="Previous experience"><i class="fa-solid fa-chevron-left"></i></button>
             <div class="grid">
-                <div class="grid-card-wrap" style="--angle: -37.5deg;">
+                <div class="grid-card-wrap">
                     <div class="grid-card" style="--angle: -37.5deg;">
                         <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-chevron-down exp-chevron"></i>
                         <span>Founder, CEO | The Clean Up Crew</span>
                         <h3>2023 - Present</h3>
                         <p class="card-text">Founded and lead a tech solutions business, delivering brand enhancement, website redesigns, process
@@ -178,9 +304,10 @@
                         <button class="read-more-btn">Read more</button>
                     </div>
                 </div>
-                <div class="grid-card-wrap" style="--angle: -12.5deg;">
+                <div class="grid-card-wrap">
                     <div class="grid-card" style="--angle: -12.5deg;">
                         <i class="fa-solid fa-credit-card"></i>
+                        <i class="fa-solid fa-chevron-down exp-chevron"></i>
                         <span>Founder, CTO | Splita</span>
                         <h3>2025 - Present</h3>
                         <p class="card-text">Co-founded Splita, a mobile-first bill-splitting platform that collects everyone’s share upfront and issues a
@@ -192,9 +319,37 @@
                         <button class="read-more-btn">Read more</button>
                     </div>
                 </div>
-                <div class="grid-card-wrap" style="--angle: 12.5deg;">
+                <div class="grid-card-wrap">
                     <div class="grid-card" style="--angle: 12.5deg;">
+                        <i class="fa-solid fa-music"></i>
+                        <i class="fa-solid fa-chevron-down exp-chevron"></i>
+                        <span>Founder | Verse by Verse &amp; VBV Edits</span>
+                        <h3>2025 - Present</h3>
+                        <p class="card-text">Founded Verse by Verse, a gospel media brand producing artist lyric breakdown content, and VBV Edits, a sister service helping UK churches convert sermon recordings into short-form social content.
+                            <br><br>Manage outreach, production, and client delivery across both brands, with a growing presence on Instagram, TikTok, and YouTube.
+                        </p>
+                        <button class="read-more-btn">Read more</button>
+                    </div>
+                </div>
+                <div class="grid-card-wrap">
+                    <div class="grid-card" style="--angle: 37.5deg;">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <i class="fa-solid fa-chevron-down exp-chevron"></i>
+                        <span>KFC | Digital Analyst</span>
+                        <h3>2025</h3>
+                        <p class="card-text">Analysed large volumes of kiosk interaction data to identify behavioural patterns, friction points, and conversion opportunities across the digital ordering journey.
+                            <br>Built dashboards and analytical reports using Google Analytics, Datadog, Excel, and Aternity, enabling real-time monitoring of customer flows, latency issues, and feature performance.
+                            <br>Worked with engineering and product teams to interpret telemetry signals, validate hypotheses, and propose data-driven improvements to kiosk UX and throughput.
+                            <br>Automated recurring analysis tasks and designed reproducible data workflows that increased reporting efficiency and reduced manual processing.
+                            <br>Presented insights to cross-functional stakeholders, influencing decisions that improved customer experience and supported revenue-driving initiatives.
+                        </p>
+                        <button class="read-more-btn">Read more</button>
+                    </div>
+                </div>
+                <div class="grid-card-wrap">
+                    <div class="grid-card">
                         <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class="fa-solid fa-chevron-down exp-chevron"></i>
                         <span>Co-Founder | Tutor Point</span>
                         <h3>2025 - Present</h3>
                         <p class="card-text">Founded Tutor Point, an online maths tutoring platform connecting Nigerian students with vetted tutors for
@@ -208,25 +363,12 @@
                         <button class="read-more-btn">Read more</button>
                     </div>
                 </div>
-                <div class="grid-card-wrap" style="--angle: 37.5deg;">
-                    <div class="grid-card" style="--angle: 37.5deg;">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                        <span>KFC | Digital Analyst</span>
-                        <h3>2025</h3>
-                        <p class="card-text">Analysed large volumes of kiosk interaction data to identify behavioural patterns, friction points, and conversion opportunities across the digital ordering journey.
-                            <br>Built dashboards and analytical reports using Google Analytics, Datadog, Excel, and Aternity, enabling real-time monitoring of customer flows, latency issues, and feature performance.
-                            <br>Worked with engineering and product teams to interpret telemetry signals, validate hypotheses, and propose data-driven improvements to kiosk UX and throughput.
-                            <br>Automated recurring analysis tasks and designed reproducible data workflows that increased reporting efficiency and reduced manual processing.
-                            <br>Presented insights to cross-functional stakeholders, influencing decisions that improved customer experience and supported revenue-driving initiatives.
-                        </p>
-                        <button class="read-more-btn">Read more</button>
-                    </div>
-                </div>
                 <div class="fan-title">
                     <h2 class="section-title">Experience</h2>
                     <span class="fan-hint">Click a card to read more</span>
                 </div>
             </div>
+            <button class="fan-nav-btn fan-next" aria-label="Next experience"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </section>
 
@@ -250,7 +392,7 @@
             </button>
             <div class="carousel-track">
                 <div class="project-card">
-                    <img src="assets/img/proj-splita.png" alt="">
+                    <img src="assets/img/proj-splita.png" alt="Splita bill-splitting app screenshot">
                     <h3>Splita</h3>
                     <p>Problem: Splitting group payments<br><br>
                         Solution: Virtual Cards to collate payments.</p>
@@ -260,7 +402,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/img/proj-e3000.png" alt="">
+                    <img src="assets/img/proj-e3000.png" alt="E-3000 evangelism tracking platform screenshot">
                     <h3>E-3000</h3>
                     <p>Problem: Tracking evangelistic efforts<br><br>
                         Solution: Logging platform that collates the details of those engaged.</p>
@@ -270,7 +412,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/img/proj-tp.png" alt="">
+                    <img src="assets/img/proj-tp.png" alt="Tutor Point tutoring platform screenshot">
                     <h3>Tutor Point</h3>
                     <p>Problem: Tracking impact of tutoring<br><br>
                         Solution: Tutoring site with performance based metrics.</p>
@@ -280,7 +422,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/img/proj-tcc.png" alt="">
+                    <img src="assets/img/proj-tcc.png" alt="The Clean Up Crew website revamp screenshot">
                     <h3>The Clean Up Crew</h3>
                     <p>Problem: Unappealing websites<br><br>
                         Solution: A website revamp service to upgrade web presence.</p>
@@ -304,10 +446,14 @@
                 <div class="input">
                     <i class="fa-solid fa-envelope"></i>
                     <input type="email" name="email" id="contact-email" placeholder="john-doe@email.com" required>
-                    <button class="footer-submit" type="submit">
-                        <span class="footer-submit-text">Submit</span>
-                    </button>
                 </div>
+                <div class="input input-message">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <textarea name="message" id="contact-message" placeholder="Leave a little message..." rows="1"></textarea>
+                </div>
+                <button class="footer-submit" type="submit">
+                    <span class="footer-submit-text">Submit</span>
+                </button>
                 <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
             </form>
         </div>

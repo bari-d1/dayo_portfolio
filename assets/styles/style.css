@@ -66,10 +66,6 @@ header.nav-solid{
     background-color: var(--surface);
 }
 
-header.nav-solid #menu-icon{
-    color: var(--text-primary);
-}
-
 /* .logo{
     background: var(--accent-gradient);
     background-clip: text;
@@ -88,6 +84,10 @@ header.nav-solid #menu-icon{
 
 .logo:hover{
     transform: scale(1.1);
+}
+
+.mobile-name{
+    display: none;
 }
 
 .section-links{
@@ -123,7 +123,8 @@ a {
 
 }
 
-.section-links li a:hover::before{
+.section-links li a:hover::before,
+.section-links a.active::before{
     width:100%;
 }
 .visit-btn{
@@ -172,6 +173,10 @@ section{
     padding-top: 12%;
     overflow: hidden;
     z-index: 5;
+}
+
+i.scroll-indicator{
+    display: none;
 }
 
 .section-bg{
@@ -269,11 +274,12 @@ section{
     position: absolute;
     top: 0;
     left: 0;
-    width: 110%;
-    height: 70vh;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 1.5rem;
     background: var(--accent-gradient);
-    padding-top: 5%;
 }
 
 .about-photo-mono{
@@ -546,6 +552,10 @@ section{
     font-size: 1.1rem;
 }
 
+.mobile-only-chip{
+    display: none;
+}
+
 /****************** WHO I AM ****************/
 
 .whoami{
@@ -557,7 +567,7 @@ section{
 
 .whoami-inner{
     max-width: 900px;
-    margin: 0 auto 5rem;
+    margin: 0 auto 3rem;
     text-align: center;
 }
 
@@ -649,6 +659,118 @@ section{
     margin-top: 0.5rem;
 }
 
+/****************** SKILLS ****************/
+
+.skills{
+    background: var(--background);
+    color: var(--text-primary);
+    min-height: auto;
+    padding: 2rem 1.5rem 6rem;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-card{
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover{
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-md);
+}
+
+.skill-card-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    padding: 1.5rem;
+}
+
+.skill-card-header i:first-child{
+    font-size: 1.4rem;
+    color: var(--primary);
+    flex: 0 0 auto;
+}
+
+.skill-card-header h3{
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.skill-chevron{
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    transition: transform 0.3s ease;
+}
+
+.skill-card.open .skill-chevron{
+    transform: rotate(180deg);
+}
+
+.skill-panel{
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    padding: 1.4rem 1.6rem;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.skill-card.open .skill-panel{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.skill-panel ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.skill-panel li{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.skill-panel li i{
+    font-size: 0.75rem;
+    color: var(--primary);
+    margin-top: 0.3rem;
+    flex: 0 0 auto;
+}
+
 /****************** EXPERIENCE ****************/
 
 .experience{
@@ -659,10 +781,10 @@ section{
 }
 
 .experience-info{
+    position: relative;
     display:flex;
     align-items:center;
     justify-content: center;
-    gap: 5rem;
 }
 
 /* .experience img{
@@ -700,6 +822,37 @@ section{
     text-align: center;
 }
 
+.fan-nav-btn{
+    position: absolute;
+    top: 280px;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--primary-light);
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.fan-nav-btn:hover{
+    background: var(--primary);
+    color: var(--primary-light);
+}
+
+.fan-prev{
+    left: 1rem;
+}
+
+.fan-next{
+    right: 1rem;
+}
+
 .grid-card-wrap{
     position: absolute;
     bottom: 0;
@@ -713,8 +866,15 @@ section{
     z-index: 6;
 }
 
+.grid-card-wrap.fan-hidden{
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .grid-card{
     --hover-scale: 1;
+    --angle: 0deg;
     width: 100%;
     height: 330px;
     transform-origin: 50% 100%;
@@ -727,7 +887,7 @@ section{
     align-items:baseline;
     justify-content: left;
     cursor: pointer;
-    transition: 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
     background: var(--primary);
     overflow: hidden;
 }
@@ -741,6 +901,10 @@ section{
 .grid-card i {
     font-size: 1.65rem;
     margin-bottom: 1rem;
+}
+
+.exp-chevron{
+    display: none;
 }
 
 .grid-card span{
@@ -838,6 +1002,42 @@ section{
     font-size: 2rem;
     line-height: 1;
     cursor: pointer;
+}
+
+/* Shrink the fan fluidly so all 4 cards stay fully on-screen on laptop/tablet
+   widths, before the 768px breakpoint switches to the stacked mobile list.
+   translateY, width and height are scaled by the same factor (derived from
+   the fan's actual rotated footprint), so the fan keeps the exact same
+   proportions at every width down to 769px, always leaving ~60px margin. */
+@media (max-width: 1576px) and (min-width: 769px){
+    .grid-card-wrap{
+        width: calc(18.544vw - 22.253px);
+        margin-left: calc(-9.272vw + 11.127px);
+    }
+
+    .grid-card{
+        height: calc(22.665vw - 27.198px);
+        padding: calc(2.198vw - 2.637px);
+        transform: rotate(var(--angle)) translateY(calc(-47.39vw + 56.868px)) scale(var(--hover-scale));
+    }
+
+    .grid-card i{
+        font-size: calc(1.813vw - 2.176px);
+    }
+
+    .grid-card span{
+        font-size: calc(1.374vw - 1.648px);
+    }
+
+    .grid-card .card-text{
+        font-size: calc(1.099vw - 1.319px);
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    .fan-nav-btn{
+        top: calc(22.665vw - 27.198px - 20px);
+    }
 }
 
 ::-webkit-scrollbar{
@@ -1001,7 +1201,9 @@ footer{
 
 .input-box{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .input{
@@ -1021,6 +1223,12 @@ footer{
     box-shadow: 0 0 0 4px rgba(125, 179, 255, 0.15);
 }
 
+.input-message{
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
 .input i{
     color: var(--primary-light);
     font-size: 1.2rem;
@@ -1037,6 +1245,27 @@ footer{
     outline: none;
     color: var(--background);
     font-size: 1rem;
+    font-family: inherit;
+}
+
+.input-message textarea{
+    flex: 1;
+    min-width: 0;
+    min-height: 1.5rem;
+    max-height: 220px;
+    padding: 0.5rem 0;
+    background: none;
+    border: none;
+    outline: none;
+    resize: vertical;
+    color: var(--background);
+    font-size: 1rem;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.input-message textarea::placeholder{
+    color: rgba(255,255,255,0.4);
 }
 
 .input input:-webkit-autofill,
@@ -1060,7 +1289,7 @@ footer{
     color: var(--background);
     font-weight: 600;
     font-size: 0.95rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.85rem 2.5rem;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
@@ -1080,7 +1309,7 @@ footer{
 
 .form-status{
     min-height: 1.2rem;
-    margin-top: 0.75rem;
+    margin-top: 0.4rem;
     font-size: 0.85rem;
     font-weight: 500;
     text-align: center;
@@ -1098,7 +1327,7 @@ footer{
     width: min(90%, 900px);
     height: 1px;
     background: rgba(255,255,255,0.12);
-    margin: 3rem auto 0;
+    margin: 1.5rem auto 0;
 }
 
 .footer-bottom{
@@ -1190,32 +1419,109 @@ footer{
         transform: translateX(0);
     }
 
-    #menu-icon{
+    .mobile-name{
         display: block;
-        font-size: 1.5rem;
+        flex: 1;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        opacity: 0;
+        transform: translateX(-24px);
+        animation: mobile-name-reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+    }
+
+    @keyframes mobile-name-reveal{
+        from{ opacity: 0; transform: translateX(-24px); }
+        to{ opacity: 1; transform: translateX(0); }
+    }
+
+    #menu-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        background: var(--primary);
+        color: var(--background);
         cursor: pointer;
+        transition: transform 0.25s ease;
+    }
+
+    header.nav-open #menu-icon{
+        transform: scale(1.05);
+    }
+
+    .visit-btn-link{
+        display: none;
+    }
+
+    .nav-backdrop{
+        position: fixed;
+        inset: 0;
+        background: rgba(8, 21, 60, 0.45);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s;
+        z-index: 9998;
+    }
+
+    .nav-backdrop.open{
+        opacity: 1;
+        visibility: visible;
     }
 
     .section-links{
         position: fixed;
         top: 5.5rem;
         left: 50%;
-        transform: translateX(-50%);
         width: 80vw;
         max-width: 320px;
         flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
+        align-items: stretch;
+        gap: 0.4rem;
         background: var(--surface);
-        padding: 2rem;
+        border: 1px solid var(--border);
+        padding: 1rem;
         border-radius: 1.5rem;
-        box-shadow: var(--shadow-md);
-        display: none;
-        z-index: 1;
+        box-shadow: 0 25px 60px rgba(8, 21, 60, 0.3);
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translate(-50%, -12px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+        z-index: 9999;
     }
 
     header.nav-open .section-links{
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(-50%, 0);
+    }
+
+    .section-links a::before{
+        display: none;
+    }
+
+    .section-links a{
+        display: block;
+        padding: 0.85rem 1rem;
+        border-radius: 0.85rem;
+        text-align: center;
+        color: var(--text-primary);
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .section-links a:hover,
+    .section-links a:active{
+        background: var(--surface-muted);
+        color: var(--primary);
     }
 
     .visit-btn{
@@ -1243,16 +1549,37 @@ footer{
     }
 
     .about-img-container{
-        width: 65vw;
-        height: 65vw;
-        max-width: 300px;
-        max-height: 300px;
+        width: 100%;
+        height: 90vw;
+        max-width: 400px;
+        max-height: 360px;
     }
 
     .about-photo{
         width: 100%;
         height: 100%;
-        padding-top: 0;
+    }
+
+    .about-photo-color{
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    i.scroll-indicator{
+        display: block;
+        position: absolute;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        animation: scroll-bounce 1.8s ease-in-out infinite;
+        z-index: 6;
+    }
+
+    @keyframes scroll-bounce{
+        0%, 100%{ transform: translateX(-50%) translateY(0); }
+        50%{ transform: translateX(-50%) translateY(10px); }
     }
 
     .info-box h3{
@@ -1280,17 +1607,35 @@ footer{
     }
 
     /* ---- Tech stack ---- */
-    .tech-stack{
-        width: 92vw;
-        overflow-x: auto;
-        justify-content: flex-start;
-        gap: 1.5rem;
-        -webkit-overflow-scrolling: touch;
+    .tech-item:nth-child(4),
+    .tech-item:nth-child(5){
+        display: none;
     }
 
-    .tech-item{
-        flex: 0 0 auto;
-        min-width: 90px;
+    .mobile-only-chip{
+        display: flex;
+    }
+
+    .tech-expand-panel{
+        top: 60px;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .tech-expand-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .tech-chip{
+        white-space: normal;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .tech-expand-row .tech-chip:last-child:nth-child(odd){
+        grid-column: 1 / -1;
     }
 
     /* ---- Who I Am ---- */
@@ -1303,7 +1648,24 @@ footer{
         margin-bottom: 3rem;
     }
 
-    /* ---- Experience: fan becomes a stacked list ---- */
+    /* ---- Skills ---- */
+    .skills-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card-header{
+        padding: 1.25rem;
+    }
+
+    .skill-panel{
+        padding: 1.1rem 1.25rem;
+    }
+
+    /* ---- Experience: fan becomes a stacked list ----
+    .experience{
+        padding-bottom: 0.5rem;
+    } */
+
     .experience-info{
         gap: 2rem;
     }
@@ -1334,9 +1696,53 @@ footer{
     }
 
     .grid-card{
+        position: relative;
         transform: none;
         height: auto;
-        min-height: 280px;
+        min-height: auto;
+    }
+
+    .grid-card-wrap.fan-hidden{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .fan-nav-btn{
+        display: none;
+    }
+
+    /* ---- Experience: accordion dropdowns, matching What I Offer ---- */
+    .exp-chevron{
+        display: block;
+        position: absolute;
+        top: 1.75rem;
+        right: 1.75rem;
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .grid-card.exp-open .exp-chevron{
+        transform: rotate(180deg);
+    }
+
+    .read-more-btn{
+        display: none;
+    }
+
+    .grid-card .card-text{
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    }
+
+    .grid-card.exp-open .card-text{
+        max-height: 600px;
+        opacity: 1;
+        margin-top: 0.5rem;
     }
 
     /* ---- Recent Projects ---- */
@@ -1372,7 +1778,7 @@ footer{
     }
 
     .input input{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .footer-submit{

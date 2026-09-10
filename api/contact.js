@@ -8,11 +8,13 @@ module.exports = async function handler(req, res) {
         return res.status(405).json({ error: 'Method not allowed.' });
     }
 
-    const { email } = req.body || {};
+    const { email, message } = req.body || {};
 
     if (!email || typeof email !== 'string' || !EMAIL_PATTERN.test(email)) {
         return res.status(400).json({ error: 'Please provide a valid email address.' });
     }
+
+    const trimmedMessage = typeof message === 'string' ? message.trim().slice(0, 5000) : '';
 
     if (!process.env.RESEND_API_KEY || !process.env.CONTACT_TO_EMAIL) {
         console.error('Missing RESEND_API_KEY or CONTACT_TO_EMAIL environment variable.');
@@ -27,7 +29,7 @@ module.exports = async function handler(req, res) {
             to: process.env.CONTACT_TO_EMAIL,
             replyTo: email,
             subject: 'New portfolio contact form submission',
-            text: `Someone submitted your portfolio contact form.\n\nTheir email: ${email}`
+            text: `Someone submitted your portfolio contact form.\n\nTheir email: ${email}\n\nMessage:\n${trimmedMessage || '(no message left)'}`
         });
 
         if (error) {
