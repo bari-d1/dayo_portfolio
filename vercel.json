@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/transcription", "destination": "https://transcription-51bm.onrender.com/transcription" },
+    { "source": "/transcription/:path*", "destination": "https://transcription-51bm.onrender.com/transcription/:path*" }
+  ]
+}
